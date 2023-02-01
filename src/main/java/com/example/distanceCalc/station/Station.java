@@ -79,5 +79,13 @@ public class Station {
 	public void setLat(Integer lat) {
 		this.lat = lat;
 	}
+
+	@Override
+	public String toString() {
+		return "Station [evaNr=" + evaNr + ", abbr=" + abbr + ", name=" + name + ", trafficType=" + trafficType
+				+ ", lon=" + lon + ", lat=" + lat + "]";
+	}
+	
+	
 }
 
