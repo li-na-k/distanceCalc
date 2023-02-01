@@ -12,18 +12,15 @@ public class Station {
 	private String abbr;
 //	private String infopt;
 	private String name;
-	private String trafficType; //TODO implement as enum
+	private TrafficType trafficType; 
 	private double lon;
 	private double lat;
 //	private String operatorName;
 //	private Integer operatorNumber;
 //	private String status;
 	
-	public Station() {
-		
-	}
 	
-	public Station(Integer evaNr, String abbr, String name, String trafficType, double lon, double lat) {
+	public Station(Integer evaNr, String abbr, String name, TrafficType trafficType, double lon, double lat) {
 		this.evaNr = evaNr;
 		this.abbr = abbr;
 		this.name = name;
@@ -56,11 +53,11 @@ public class Station {
 		this.name = name;
 	}
 
-	public String getTrafficType() {
+	public TrafficType getTrafficType() {
 		return trafficType;
 	}
 
-	public void setTrafficType(String trafficType) {
+	public void setTrafficType(TrafficType trafficType) {
 		this.trafficType = trafficType;
 	}
 

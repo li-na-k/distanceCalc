@@ -1,7 +1,5 @@
 package com.example.distanceCalc.distance;
 
-import java.io.Console;
-
 import com.example.distanceCalc.station.Station;
 
 public class Distance {
@@ -26,11 +24,14 @@ public class Distance {
 	}
 	
 	private static double distanceInMeters(double lat1, double lon1, double lat2, double lon2) {
+		//Haversine Formula
 		/* source: https://stackoverflow.com/questions/3694380/calculating-distance-between-two-points-using-latitude-longitude */
 	    final int R = 6371; // Radius of the earth
 
-	    double latDistance = Math.toRadians(lat2 - lat1);
+	    double latDistance = Math.toRadians(lat2 - lat1); //lat and long unit is degree
 	    double lonDistance = Math.toRadians(lon2 - lon1);
+	    
+	    //from angular terms to meters
 	    double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
 	            + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
 	            * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
