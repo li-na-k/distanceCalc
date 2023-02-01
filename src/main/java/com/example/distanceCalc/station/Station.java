@@ -1,7 +1,14 @@
 package com.example.distanceCalc.station;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity //for hibernate (map station to database)
+@Table //for table in database
 public class Station {
-	private Integer evaNr;
+	@Id
+	private Integer evaNr; 
 	private String abbr;
 //	private String infopt;
 	private String name;
@@ -12,8 +19,11 @@ public class Station {
 //	private Integer operatorNumber;
 //	private String status;
 	
+	public Station() {
+		
+	}
+	
 	public Station(Integer evaNr, String abbr, String name, String trafficType, Integer lon, Integer lat) {
-		super();
 		this.evaNr = evaNr;
 		this.abbr = abbr;
 		this.name = name;
