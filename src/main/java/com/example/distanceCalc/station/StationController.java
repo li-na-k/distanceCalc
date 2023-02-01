@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.distanceCalc.distance.Distance;
+
 //API Layer
 @RestController
 @RequestMapping(path = "api/v1/distance")
@@ -26,7 +28,7 @@ public class StationController {
 	}
 	
 	@GetMapping(path = "{station1}/{station2}")
-	public String getDistance(@PathVariable("station1") String station1,@PathVariable("station2") String station2){
+	public Distance getDistance(@PathVariable("station1") String station1,@PathVariable("station2") String station2){
 		return stationService.getDistance(station1, station2);
 	}
 

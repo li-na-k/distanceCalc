@@ -13,8 +13,8 @@ public class Station {
 //	private String infopt;
 	private String name;
 	private String trafficType; //TODO implement as enum
-	private Integer lon;
-	private Integer lat;
+	private double lon;
+	private double lat;
 //	private String operatorName;
 //	private Integer operatorNumber;
 //	private String status;
@@ -23,7 +23,7 @@ public class Station {
 		
 	}
 	
-	public Station(Integer evaNr, String abbr, String name, String trafficType, Integer lon, Integer lat) {
+	public Station(Integer evaNr, String abbr, String name, String trafficType, double lon, double lat) {
 		this.evaNr = evaNr;
 		this.abbr = abbr;
 		this.name = name;
@@ -64,7 +64,7 @@ public class Station {
 		this.trafficType = trafficType;
 	}
 
-	public Integer getLon() {
+	public double getLon() {
 		return lon;
 	}
 
@@ -72,7 +72,7 @@ public class Station {
 		this.lon = lon;
 	}
 
-	public Integer getLat() {
+	public double getLat() {
 		return lat;
 	}
 
